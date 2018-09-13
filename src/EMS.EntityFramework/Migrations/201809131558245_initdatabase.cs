@@ -5,7 +5,7 @@ namespace EMS.Migrations
     using System.Data.Entity.Infrastructure.Annotations;
     using System.Data.Entity.Migrations;
     
-    public partial class Updated_ABP : DbMigration
+    public partial class initdatabase : DbMigration
     {
         public override void Up()
         {
@@ -274,7 +274,7 @@ namespace EMS.Migrations
                     {
                         Id = c.Long(nullable: false, identity: true),
                         AuthenticationSource = c.String(maxLength: 64),
-                        UserName = c.String(nullable: false, maxLength: 32),
+                        UserName = c.String(nullable: false, maxLength: 256),
                         TenantId = c.Int(),
                         EmailAddress = c.String(nullable: false, maxLength: 256),
                         Name = c.String(nullable: false, maxLength: 32),
@@ -454,7 +454,7 @@ namespace EMS.Migrations
                         TenantId = c.Int(),
                         UserId = c.Long(nullable: false),
                         UserLinkId = c.Long(),
-                        UserName = c.String(maxLength: 32),
+                        UserName = c.String(maxLength: 256),
                         EmailAddress = c.String(maxLength: 256),
                         LastLoginTime = c.DateTime(),
                         IsDeleted = c.Boolean(nullable: false),

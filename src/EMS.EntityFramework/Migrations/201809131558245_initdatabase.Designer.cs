@@ -7,13 +7,13 @@ namespace EMS.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class Upgraded_ABP_381 : IMigrationMetadata
+    public sealed partial class initdatabase : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Upgraded_ABP_381));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(initdatabase));
         
         string IMigrationMetadata.Id
         {
-            get { return "201807271154374_Upgraded_ABP_3.8.1"; }
+            get { return "201809131558245_initdatabase"; }
         }
         
         string IMigrationMetadata.Source
