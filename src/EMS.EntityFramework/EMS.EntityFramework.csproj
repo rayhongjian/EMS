@@ -219,13 +219,9 @@
   <ItemGroup>
     <Compile Include="EntityFramework\EMSDbContext.cs" />
     <Compile Include="EntityFramework\Repositories\EMSRepositoryBase.cs" />
-    <Compile Include="Migrations\201809131558245_initdatabase.cs" />
-    <Compile Include="Migrations\201809131558245_initdatabase.Designer.cs">
-      <DependentUpon>201809131558245_initdatabase.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201809131722070_createTable.cs" />
-    <Compile Include="Migrations\201809131722070_createTable.Designer.cs">
-      <DependentUpon>201809131722070_createTable.cs</DependentUpon>
+    <Compile Include="Migrations\201809140704494_initdatabase.cs" />
+    <Compile Include="Migrations\201809140704494_initdatabase.Designer.cs">
+      <DependentUpon>201809140704494_initdatabase.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\AbpZeroDbMigrator.cs" />
     <Compile Include="Migrations\Configuration.cs" />
@@ -250,11 +246,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201809131558245_initdatabase.resx">
-      <DependentUpon>201809131558245_initdatabase.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201809131722070_createTable.resx">
-      <DependentUpon>201809131722070_createTable.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201809140704494_initdatabase.resx">
+      <DependentUpon>201809140704494_initdatabase.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

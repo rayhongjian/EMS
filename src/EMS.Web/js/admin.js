@@ -196,11 +196,11 @@ $.AdminBSB.rightSideBar = {
 *  You can manage the search bar
 *  
 */
-var $searchBar;
+var $searchBar = $('.search-bar');
 $.AdminBSB.search = {
     activate: function () {
         var _this = this;
-        $searchBar = $('.search-bar');
+
         //Search button click event
         $('.js-search').on('click', function () {
             _this.showSearchBar();
@@ -451,12 +451,15 @@ $.AdminBSB.browser = {
 }
 //==========================================================================================================================
 
-$.AdminBSB.browser.activate();
+$(function () {
+    $.AdminBSB.browser.activate();
+    $.AdminBSB.leftSideBar.activate();
+    $.AdminBSB.rightSideBar.activate();
+    $.AdminBSB.navbar.activate();
+    $.AdminBSB.dropdownMenu.activate();
+    $.AdminBSB.input.activate();
+    $.AdminBSB.select.activate();
+    $.AdminBSB.search.activate();
 
-//$(function () {
-
-//    $.AdminBSB.input.activate();
-//    $.AdminBSB.select.activate();
-
-//    setTimeout(function () { $('.page-loader-wrapper').fadeOut(); }, 50);
-//});
+    setTimeout(function () { $('.page-loader-wrapper').fadeOut(); }, 50);
+});
