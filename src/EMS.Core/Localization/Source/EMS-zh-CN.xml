@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <localizationDictionary culture="zh-CN">
   <texts>
-    <text name="HomePage" value="主页" />
+    <text name="HomePage" value="首页" />
+    <text name="Budgeting" value="预算编制" />
+    <text name="Execution" value="预算执行" />
+    <text name="Report" value="预算报表" />
+    <text name="SystemManage" value="系统管理" />
+    <text name="MoudleManage" value="模块管理" />
     <text name="About" value="关于我们" />
     <text name="WellcomeMessage" value="欢迎使用 EMS!" />
 

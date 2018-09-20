@@ -5,7 +5,7 @@ namespace EMS.Migrations
     using System.Data.Entity.Infrastructure.Annotations;
     using System.Data.Entity.Migrations;
     
-    public partial class initdatabase : DbMigration
+    public partial class reinitdatabase : DbMigration
     {
         public override void Up()
         {

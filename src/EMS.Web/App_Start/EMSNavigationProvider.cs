@@ -12,6 +12,12 @@ namespace EMS.Web
     /// </summary>
     public class EMSNavigationProvider : NavigationProvider
     {
+        //    <text name = "HomePage" value="首页" />
+        //<text name = "Budgeting" value="预算编制" />
+        //<text name = "Execution" value="预算执行" />
+        //<text name = "Report" value="预算报表" />
+        //<text name = "SystemManage" value="系统管理" />
+        //<text name = "About" value="关于我们" />
         public override void SetNavigation(INavigationProviderContext context)
         {
             context.Manager.MainMenu
@@ -20,42 +26,43 @@ namespace EMS.Web
                         PageNames.Home,
                         L("HomePage"),
                         url: "",
-                        icon: "home",
-                        requiresAuthentication: true
+                        icon: "home"
+                    //requiresAuthentication: true
                     )
                 ).AddItem(
                     new MenuItemDefinition(
-                        PageNames.Tenants,
-                        L("Tenants"),
-                        url: "Tenants",
-                        icon: "business",
-                        requiredPermissionName: PermissionNames.Pages_Tenants
+                        "Budgeting",
+                        L("Budgeting"),
+                        url: "Budgeting",
+                        icon: "business"
+                    //,
+                    //requiredPermissionName: PermissionNames.Pages_Tenants
                     )
                 ).AddItem(
                     new MenuItemDefinition(
-                        PageNames.Users,
-                        L("Users"),
-                        url: "Users",
-                        icon: "people",
-                        requiredPermissionName: PermissionNames.Pages_Users
+                        "Execution",
+                        L("Execution"),
+                        url: "Execution",
+                        icon: "people"
+                    //requiredPermissionName: PermissionNames.Pages_Users
                     )
                 ).AddItem(
                     new MenuItemDefinition(
-                        PageNames.Roles,
-                        L("Roles"),
-                        url: "Roles",
-                        icon: "local_offer",
-                        requiredPermissionName: PermissionNames.Pages_Roles
+                        "Report",
+                        L("Report"),
+                        url: "Report",
+                        icon: "local_offer"
+                    //requiredPermissionName: PermissionNames.Pages_Roles
                     )
-                )
-                .AddItem(
-                    new MenuItemDefinition(
-                        PageNames.About,
-                        L("About"),
-                        url: "About",
-                        icon: "info"
-                    )
-                ).AddItem( //Menu items below is just for demonstration!
+                ).AddItem(new MenuItemDefinition(
+                    "SystemManage",
+                    new FixedLocalizableString("系统管理"),
+                    icon: "menu"
+                ).AddItem(new MenuItemDefinition(
+                    "MoudleManage",
+                    new FixedLocalizableString("模块管理"),
+                    url: "Module")))
+                .AddItem( //Menu items below is just for demonstration!
                     new MenuItemDefinition(
                         "MultiLevelMenu",
                         L("MultiLevelMenu"),
