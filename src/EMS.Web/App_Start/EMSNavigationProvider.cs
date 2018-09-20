@@ -61,7 +61,12 @@ namespace EMS.Web
                 ).AddItem(new MenuItemDefinition(
                     "MoudleManage",
                     new FixedLocalizableString("模块管理"),
-                    url: "Module")))
+                    url: "Module"))
+                    .AddItem(new MenuItemDefinition(
+                    "User",
+                    new FixedLocalizableString("用户管理"),
+                    url: "Users"))
+                )
                 .AddItem( //Menu items below is just for demonstration!
                     new MenuItemDefinition(
                         "MultiLevelMenu",

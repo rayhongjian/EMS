@@ -18,7 +18,7 @@ using EMS.Web.Models.Users;
 
 namespace EMS.Web.Controllers
 {
-    [AbpMvcAuthorize(PermissionNames.Pages_Users)]
+    //[AbpMvcAuthorize(PermissionNames.Pages_Users)]
     public class UsersController : EMSControllerBase
     {
         private readonly IUserAppService _userAppService;
